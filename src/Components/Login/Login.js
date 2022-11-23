@@ -1,8 +1,7 @@
 import React from 'react'
-import NavBar from '../NavBar'
 import axios from 'axios';
 import {useState} from 'react'
-import {Navigate, Outlet, useNavigate} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 function Login() {
   const [email, setemail] = useState("");
@@ -32,7 +31,7 @@ function Login() {
             // console.log(Response.status)
            // console.log(Response.data.token)
 
-            if (Response.status == 200) {
+            if (Response.status === 200) {
                 // alert("Email is Submitted")
                 let token=Response.data.token;
                 localStorage.setItem('token', token)

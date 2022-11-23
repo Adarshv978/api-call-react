@@ -6,12 +6,12 @@ import axios from 'axios';
 function Home() {
   let [newdata, setNewData] = useState([]);
 
-  const [isChecked, setIsChecked] = useState(false);
+  // const [isChecked, setIsChecked] = useState(false);
 
 
 
   const [masterChecked, setMasterChecked] = useState(false);
-  let selected = true;
+ 
 
 
   useEffect(() => {
@@ -33,11 +33,6 @@ function Home() {
     setMasterChecked(e.target.checked);
     setNewData(tempList)
   }
-
-
-
-
-
 
   const onItemCheck = (e, item) => {
     let tempList = newdata;
@@ -92,7 +87,7 @@ function Home() {
                     id={`rowcheck${value.id}`}
                     onChange={(e) => onItemCheck(e, value)}
                   /></td>
-                  <td><div id='image'><img src={value.avatar} /></div></td>
+                  <td><div id='image'><img src={value.avatar} alt="avatar" /></div></td>
                   <td>{value.id}</td>
                   <td>{value.first_name}</td>
                   <td>{value.last_name}</td>

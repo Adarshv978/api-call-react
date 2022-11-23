@@ -1,5 +1,4 @@
 import React from 'react'
-import NavBar from '../NavBar'
 import { useFormik } from 'formik';
 import { singnUpSchema } from './FormValidation';
 import './SignIn.css'
@@ -13,7 +12,7 @@ const initialValues = {
 };
 
 function SignIn() {
-  const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
+  const { values, errors,  handleBlur, handleChange, handleSubmit } = useFormik({
     initialValues: initialValues,
     validationSchema: singnUpSchema,
 
